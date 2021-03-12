@@ -62,17 +62,15 @@ function renderQuestion() {
 }
 
 function correctAnswer() {
-    questionTracker++
     renderQuestion()
     previousResult.textContent = "Correct!"
-    
+    questionTracker++
 }
 //previousResult was wordBlank
 function incorrectAnswer() {
-    questionTracker++
     renderQuestion()
     previousResult.textContent = "Incorrect!"
-    
+    questionTracker++
 }
 
 

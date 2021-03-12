@@ -8,11 +8,6 @@ function startQuiz() {
     //hide titlePage section show question 1
     timerCount = 60;
     previousResult.textContent = ""
-    renderQuestion1()
-}
-
-function renderQuestion1() {
-    
 }
 
 function correctAnswer() {

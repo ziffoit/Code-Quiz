@@ -52,22 +52,15 @@ function renderQuestion() {
         var button = document.createElement("button")
         button.textContent = answer
         quizSection.append(button)
-        if (getQuestion.correctAnswer) {
-            button.addEventListener("click", correctAnswer)
-        } else {
-            button.addEventListener("click", incorrectAnswer)
-        }
         // when user clicks button for next question questionTracker++
     }
 }
 
 function correctAnswer() {
-    renderQuestion()
     previousResult.textContent = "Correct!"
 }
 //previousResult was wordBlank
 function incorrectAnswer() {
-    renderQuestion()
     previousResult.textContent = "Incorrect!"
 }
 

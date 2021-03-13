@@ -7,7 +7,6 @@ var quizSection = document.querySelector("#quizSection")
 var timer;
 var timerElement = document.querySelector(".timer")
 var endPage = document.querySelector("#endPage")
-var finalScore = document.querySelector("#finalScore")
 var questionsArray = [
     {
         question:"Commonly used data types DO NOT include:",
@@ -43,7 +42,7 @@ function startTimer() {
     timerElement.textContent = timerCount
       if (timerCount <= 0) {
         // Clears interval
-        renderEndPage()
+        clearInterval(timer);
       }
     }
 function renderQuestion() {
@@ -95,13 +94,7 @@ function incorrectAnswer() {
 }
 
 function renderEndPage() {
-    var score = timerCount
-    finalScore.textContent = score
-    quizSection.setAttribute("class", "hidden")
-    timerElement.setAttribute("class", "hidden")
-    clearInterval(timer)
-    endPage.removeAttribute("class")
-    
+
 }
 
 startQuizBtn.addEventListener("click", startQuiz)

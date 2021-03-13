@@ -43,7 +43,7 @@ function startTimer() {
     timerElement.textContent = timerCount
       if (timerCount <= 0) {
         // Clears interval
-        renderEndPage()
+        clearInterval(timer)
       }
     }
 function renderQuestion() {

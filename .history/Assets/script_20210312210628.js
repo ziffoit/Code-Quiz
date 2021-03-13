@@ -43,7 +43,7 @@ function startTimer() {
     timerElement.textContent = timerCount
       if (timerCount <= 0) {
         // Clears interval
-        renderEndPage()
+        clearInterval(timer);
       }
     }
 function renderQuestion() {
@@ -95,13 +95,9 @@ function incorrectAnswer() {
 }
 
 function renderEndPage() {
+    endPage.setAttribute("class", "")
     var score = timerCount
     finalScore.textContent = score
-    quizSection.setAttribute("class", "hidden")
-    timerElement.setAttribute("class", "hidden")
-    clearInterval(timer)
-    endPage.removeAttribute("class")
-    
 }
 
 startQuizBtn.addEventListener("click", startQuiz)

@@ -43,6 +43,7 @@ function startTimer() {
     timerElement.textContent = timerCount
       if (timerCount <= 0) {
         // Clears interval
+        clearInterval(timer)
         renderEndPage()
       }
     }

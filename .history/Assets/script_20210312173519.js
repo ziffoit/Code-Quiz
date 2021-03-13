@@ -6,8 +6,6 @@ var quizQuestion = document.querySelector("#quizQuestion")
 var quizSection = document.querySelector("#quizSection")
 var timer;
 var timerElement = document.querySelector(".timer")
-var endPage = document.querySelector("#endPage")
-var finalScore = document.querySelector("#finalScore")
 var questionsArray = [
     {
         question:"Commonly used data types DO NOT include:",
@@ -26,8 +24,8 @@ var questionsArray = [
     },
 ]
 var questionTracker = 0
-endPage.setAttribute("class", "hidden")
 //executed when start button is clicked
+// add penalty to timer for wrong answer
 // local storage for keeping highscores
 function startQuiz() {
     titlePage.setAttribute("class", "hidden")
@@ -43,7 +41,7 @@ function startTimer() {
     timerElement.textContent = timerCount
       if (timerCount <= 0) {
         // Clears interval
-        renderEndPage()
+        clearInterval(timer);
       }
     }
 function renderQuestion() {
@@ -86,7 +84,7 @@ function correctAnswer() {
     previousResult.textContent = "Correct!"
     
 }
-//timer penalty for wrong answer
+
 function incorrectAnswer() {
     loadNextQuestion()
     previousResult.textContent = "Incorrect!"
@@ -95,13 +93,7 @@ function incorrectAnswer() {
 }
 
 function renderEndPage() {
-    var score = timerCount
-    finalScore.textContent = score
-    quizSection.setAttribute("class", "hidden")
-    timerElement.setAttribute("class", "hidden")
-    clearInterval(timer)
-    endPage.removeAttribute("class")
-    
+
 }
 
 startQuizBtn.addEventListener("click", startQuiz)

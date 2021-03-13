@@ -62,31 +62,21 @@ function renderQuestion() {
     }
 }
 
-function removeButtons() {
-    var buttons = document.getElementsByClassName("questionAnswer")
-    for (let i = 0; i < buttons.length; i++) {
-        buttons[i].remove()
-    }
-}
-
-function loadNextQuestion() {
-    questionTracker++
-    removeButtons()
-    renderQuestion()
-}
-
 function correctAnswer() {
-    loadNextQuestion()
+    questionTracker++
+    document.getElementsByClassName("questionAnswer")[0].remove()
+    renderQuestion()
     previousResult.textContent = "Correct!"
     
 }
 //previousResult was wordBlank
 function incorrectAnswer() {
-    loadNextQuestion()
+    questionTracker++
+    document.getElementsByClassName("questionAnswer")[0].remove()
+    renderQuestion()
     previousResult.textContent = "Incorrect!"
     
 }
-
 
 
 startQuizBtn.addEventListener("click", startQuiz)

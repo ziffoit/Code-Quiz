@@ -9,7 +9,7 @@ var timerElement = document.querySelector(".timer")
 var endPage = document.querySelector("#endPage")
 var finalScore = document.querySelector("#finalScore")
 var initials = document.querySelector("#initials")
-var initialsForm = document.querySelector("#initialsForm")
+var initialsForm = document.querySelector("initialsForm")
 var questionsArray = [
     {
         question:"Commonly used data types DO NOT include:",
@@ -32,14 +32,11 @@ endPage.setAttribute("class", "hidden")
 //executed when start button is clicked
 // local storage for keeping highscores
 function startQuiz() {
-    questionTracker = 0
     titlePage.setAttribute("class", "hidden")
     timer = setInterval(startTimer, 1000)
     timerElement.textContent = timerCount
     //hide titlePage section show question 1
     previousResult.textContent = ""
-    timerElement.removeAttribute("class")
-    quizSection.removeAttribute("class")
     renderQuestion()
 }
 
@@ -109,17 +106,8 @@ function renderEndPage() {
     
 }
 
-function saveHighScores(event) {
-    event.preventDefault()
-    var nameScore = {
-        name: initials.value,
-        score: finalScore.textContent
-    }
-
-    localStorage.setItem("score", JSON.stringify(nameScore))
-    endPage.setAttribute("class", "hidden")
-    titlePage.removeAttribute("class")
-}
-
 startQuizBtn.addEventListener("click", startQuiz)
-initialsForm.addEventListener("submit", saveHighScores)
+
+function saveHighScores() {
+    var name = initials
+}

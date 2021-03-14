@@ -32,14 +32,11 @@ endPage.setAttribute("class", "hidden")
 //executed when start button is clicked
 // local storage for keeping highscores
 function startQuiz() {
-    questionTracker = 0
     titlePage.setAttribute("class", "hidden")
     timer = setInterval(startTimer, 1000)
     timerElement.textContent = timerCount
     //hide titlePage section show question 1
     previousResult.textContent = ""
-    timerElement.removeAttribute("class")
-    quizSection.removeAttribute("class")
     renderQuestion()
 }
 
@@ -111,14 +108,13 @@ function renderEndPage() {
 
 function saveHighScores(event) {
     event.preventDefault()
+    console.log(event.currentTarget)
     var nameScore = {
-        name: initials.value,
+        name: initials.textContent,
         score: finalScore.textContent
     }
 
     localStorage.setItem("score", JSON.stringify(nameScore))
-    endPage.setAttribute("class", "hidden")
-    titlePage.removeAttribute("class")
 }
 
 startQuizBtn.addEventListener("click", startQuiz)

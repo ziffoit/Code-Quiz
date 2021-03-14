@@ -32,14 +32,11 @@ endPage.setAttribute("class", "hidden")
 //executed when start button is clicked
 // local storage for keeping highscores
 function startQuiz() {
-    questionTracker = 0
     titlePage.setAttribute("class", "hidden")
     timer = setInterval(startTimer, 1000)
     timerElement.textContent = timerCount
     //hide titlePage section show question 1
     previousResult.textContent = ""
-    timerElement.removeAttribute("class")
-    quizSection.removeAttribute("class")
     renderQuestion()
 }
 

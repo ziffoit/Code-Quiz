@@ -38,8 +38,6 @@ function startQuiz() {
     timerElement.textContent = timerCount
     //hide titlePage section show question 1
     previousResult.textContent = ""
-    timerElement.removeAttribute("class")
-    quizSection.removeAttribute("class")
     renderQuestion()
 }
 

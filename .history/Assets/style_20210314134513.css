@@ -4,7 +4,7 @@
 
 body {
   display: flex;
-  flex-direction: column wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -20,5 +20,5 @@ section {
 }
 
 button {
-  border-radius: 10%;
+  align-items: center;
 }

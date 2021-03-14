@@ -1,0 +1,25 @@
+p {
+  font-size: 20px;
+}
+
+button {
+  font-size: 20px;
+}
+
+body {
+  display: flex;
+}
+
+header {
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}

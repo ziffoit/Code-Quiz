@@ -1,0 +1,16 @@
+p {
+  font-size: 20px;
+}
+
+button {
+  font-size: 20px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}

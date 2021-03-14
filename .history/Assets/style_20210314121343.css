@@ -1,0 +1,31 @@
+* {
+  text-align: center;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  position: fixed;
+  margin: 3px;
+}
+
+p {
+  font-size: 20px;
+}
+
+button {
+  font-size: 20px;
+}
+
+/* h1 {
+  text-align: center;
+} */
+
+.hidden {
+  display: none;
+}

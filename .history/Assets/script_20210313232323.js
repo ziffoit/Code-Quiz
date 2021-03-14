@@ -97,10 +97,11 @@ function correctAnswer() {
 
 //timer penalty for wrong answer
 function incorrectAnswer() {
+    loadNextQuestion()
+    previousResult.textContent = "Incorrect!"
     timerCount = timerCount - 20
     timerElement.textContent = timerCount
-    previousResult.textContent = "Incorrect!"
-    loadNextQuestion()
+    
 }
 
 // end of quiz

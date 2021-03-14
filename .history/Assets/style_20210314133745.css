@@ -4,21 +4,16 @@
 
 body {
   display: flex;
-  flex-direction: column wrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
 
 header {
-  flex: 0 1 auto;
+  flex-basis: auto;
 }
 
 section {
-  flex: 0 1 auto;
-  justify-content: center;
-}
-
-button {
-  border-radius: 10%;
+  flex-basis: auto;
 }

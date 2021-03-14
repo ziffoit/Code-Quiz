@@ -4,7 +4,7 @@
 
 body {
   display: flex;
-  flex-direction: column wrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -16,9 +16,4 @@ header {
 
 section {
   flex: 0 1 auto;
-  justify-content: center;
-}
-
-button {
-  border-radius: 10%;
 }

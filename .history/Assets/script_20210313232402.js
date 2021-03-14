@@ -99,8 +99,8 @@ function correctAnswer() {
 function incorrectAnswer() {
     timerCount = timerCount - 20
     timerElement.textContent = timerCount
-    previousResult.textContent = "Incorrect!"
     loadNextQuestion()
+    previousResult.textContent = "Incorrect!"
 }
 
 // end of quiz

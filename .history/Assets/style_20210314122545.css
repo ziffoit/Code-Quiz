@@ -1,0 +1,31 @@
+* {
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+p {
+  font-size: 20px;
+}
+
+button {
+  font-size: 20px;
+}
+
+/* h1 {
+  text-align: center;
+} */
+
+.hidden {
+  display: none;
+}

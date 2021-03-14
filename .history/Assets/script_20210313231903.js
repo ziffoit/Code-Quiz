@@ -27,10 +27,8 @@ var questionsArray = [
         correctAnswer:"all of the above"
     },
 ]
-
 var questionTracker = 0
 endPage.setAttribute("class", "hidden")
-
 //executed when start button is clicked
 // local storage for keeping highscores
 function startQuiz() {
@@ -48,12 +46,11 @@ function startQuiz() {
 function startTimer() {
     timerCount--
     timerElement.textContent = timerCount
-    if (timerCount <= 0) {
+      if (timerCount <= 0) {
         // Clears interval through renderEndPage
         renderEndPage()
+      }
     }
-}
-
 function renderQuestion() {
     if (questionTracker >= questionsArray.length){
         renderEndPage()
@@ -94,15 +91,13 @@ function correctAnswer() {
     previousResult.textContent = "Correct!"
     
 }
-
 //timer penalty for wrong answer
 function incorrectAnswer() {
-    timerCount = timerCount - 20
-    timerElement.textContent = timerCount
-    previousResult.textContent = "Incorrect!"
     loadNextQuestion()
+    previousResult.textContent = "Incorrect!"
+    timerCount = timerCount - 10
+    
 }
-
 // end of quiz
 function renderEndPage() {
     var score = timerCount

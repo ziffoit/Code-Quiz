@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="./Assets/style.css" />
     <title>Document</title>
   </head>
-
   <body>
     <header>
       <p class="timer"></p>
@@ -16,16 +15,11 @@
       <h1>Coding Quiz</h1>
       <p>
         Try to answer the following code-related questions within the time
-        limit.
-      </p>
-      <p>
-        Keep in mind that incorrect answers will penalize your score/time by 20
-        seconds.
+        limit. Keep in mind that incorrect answers will penalize your score/time
+        by 20 seconds.
       </p>
       <button id="startQuiz">Start Quiz!</button>
-      <div>
-        <a href="./highScore.html">View High Scores</a>
-      </div>
+      <a href="./highScore.html">View High Scores</a>
     </section>
     <section id="quizSection">
       <h1 id="quizQuestion"></h1>
@@ -33,15 +27,14 @@
     </section>
     <section id="endPage">
       <h1>Finish!</h1>
-      <p>
-        Your final score is:
-        <span id="finalScore"></span>
-      </p>
+      <p>Your final score is:</p>
+      <p id="finalScore"></p>
       <form id="initialsForm">
         <input type="text" id="initials" />
         <button type="submit">Submit</button>
       </form>
     </section>
     <script src="./Assets/script.js"></script>
+    <script src="./Assets/highscore.js"></script>
   </body>
 </html>
